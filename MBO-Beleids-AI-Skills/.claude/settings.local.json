@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__notebooklm-mcp__get_health",
+      "mcp__notebooklm-mcp__setup_auth",
+      "Bash(nlm notebook create:*)"
+    ]
+  }
+}

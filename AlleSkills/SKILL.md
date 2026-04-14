@@ -18,20 +18,20 @@ Analyseer de vraag en bepaal welke persona het beste past:
 
 ## Beschikbare skills per persona
 
-### Gebruiker (map: /Gebruiker)
+### Gebruiker
 - `prompt-helper` - Genereer effectieve prompts voor lesplannen, feedback, rapportages
 - `feedback-analyzer` - Analyseer student- en docentfeedback op trends en sentiment
 
-### Gids (map: /Gids)
+### Gids
 - `ethische-ai-check` - Toets AI-output op bias, privacy, EU AI Act en ethische principes
 - `bias-detector` - Detecteer bias in beoordelingen, rapportages en AI-gegenereerde teksten
 
-### Gangmaker (map: /Gangmaker)
+### Gangmaker
 - `beroepsanalyse` - Onderwijs-arbeidsmarkt-matching voor opleidingen
 - `use-case-explorer` - Identificeer AI-kansen via Double Diamond-methode
 - `verandermanagement-ai` - Roadmap voor AI-adoptie in teams
 
-### Ontwerper (map: /Ontwerper)
+### Ontwerper
 - `kpi-analyse` - Automatische rapportage van dropout, placement en trends
 - `data-pipeline-review` - Schoonmaak en analyse van leerlingdata
 - `swot-benchmark` - Opleidingsanalyse op SWOT en benchmark
@@ -41,7 +41,7 @@ Analyseer de vraag en bepaal welke persona het beste past:
 - `trendvoorspelling` - Voorspel toekomstige trends
 - `data-validatie-check` - Controleer datakwaliteit van exports
 
-### Impactmaker (map: /Impactmaker)
+### Impactmaker
 - `policy-brief` - Evidence-informed beleidsnotities
 - `leerweg-review` - Analyse van VSV-risico's en interventies
 - `strategisch-advies` - Strategische advisering over AI-implementatie
@@ -51,36 +51,27 @@ Analyseer de vraag en bepaal welke persona het beste past:
 
 ## Gebruik
 
-Ontvang de vraag van de gebruiker
-Analyseer de vraag op basis van triggerwoorden en context
-Gouden Regel: Context > Template
-De specifieke variabelen uit de lopende dialoog (bijv. een lopende pilot, specifieke bedragen of eerder genoemde scenario's) hebben altijd prioriteit boven de standaardteksten in de Skill-catalogus. Een skill mag de structuur leveren, maar de dialoog levert de unieke inhoud.
-Verplichte Context-Check (Silent)
-Voordat een skill wordt uitgevoerd, moet de AI controleren: "Welke unieke afspraken of variabelen uit de laatste 3 prompts moeten meegenomen worden in dit document?"
-Anti-Drift Mechanisme
-Indien een gebruiker verwijst naar een specifiek besluit of bedrag (zoals de 'pilot-buffer'), mag dit onder geen beding worden weggelaten in de output, ook als het template van de skill hier geen expliciet kopje voor heeft. Voeg in dat geval een sectie toe of integreer het in de bestaande koppen.
-Bevestiging bij Wendingen
-Als de AI vermoedt dat de gebruiker een radicale wending in het beleidsproces voorstelt, moet de AI dit eerst kort verifiëren ("Ik merk dat we afstappen van de buffer-discussie, klopt dat?") voordat het hele document wordt herschreven naar een nieuw template.
-Bepaal de juiste persona
-Roep de meest relevante skill aan
-
+1. Ontvang de vraag van de gebruiker
+2. Analyseer de vraag op basis van triggerwoorden en context
+3. Bepaal de juiste persona
+4. Roep de meest relevante skill aan
 
 ## Voorbeelden
 
 **Input:** "Ik wil een lesplan maken voor metaal BOL niveau 2"
-→ Router naar: **Gebruiker** → `prompt-helper`
+→ **Gebruiker** → `prompt-helper`
 
 **Input:** "Controleer deze tekst op bias"
-→ Router naar: **Gids** → `bias-detector`
+→ **Gids** → `bias-detector`
 
 **Input:** "Analyseer de arbeidsmarkt voor IT-opleidingen in Twente"
-→ Router naar: **Gangmaker** → `beroepsanalyse`
+→ **Gangmaker** → `beroepsanalyse`
 
 **Input:** "Maak een dashboard van onze KPI's"
-→ Router naar: **Ontwerper** → `dashboard-generator`
+→ **Ontwerper** → `dashboard-generator`
 
 **Input:** "Schrijf een beleidsnotitie over digitale vaardigheden"
-→ Router naar: **Impactmaker** → `policy-brief`
+→ **Impactmaker** → `policy-brief`
 
 ---
 
